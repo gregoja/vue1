@@ -1,31 +1,18 @@
 <template>
-  <HeaderTop />
-  <article class="administraceArticle">
-    <br />
-    <h2 style="color: red">
-      Tato část není zajímavá
-    </h2>
-    <br />
-    <img
-      style="display: table; margin: auto"
-      src="./assets/not_important.jpg"
-      width="500"
-      height="500"
-    />
-    <br />
-  </article>
-  <FooterBottom />
+  <TheHeader />
+  <router-view></router-view>
+  <TheFooter />
 </template>
 
 <script>
-import HeaderTop from "./components/HeaderTop.vue";
-import FooterBottom from "./components/FooterBottom.vue";
+import TheHeader from "./components/TheHeader.vue";
+import TheFooter from "./components/TheFooter.vue";
 
 export default {
   name: "App",
   components: {
-    HeaderTop,
-    FooterBottom,
+    TheHeader,
+    TheFooter,
   },
 };
 </script>

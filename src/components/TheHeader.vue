@@ -4,22 +4,22 @@
       <nav>
         <div class="menu-pc">
           <ul class="menu-list">
-            <li class="link"><a href="index.html">Úvod</a></li>
-            <li class="link"><a href="uc.html">Cukrárna</a></li>
-            <li class="link"><a href="index.html">Nabídka</a></li>
+            <li class="link"><router-link to="/" exact>Úvod</router-link></li>
+            <li class="link"><router-link to="/about">Cukrárna</router-link></li>
+            <li class="link"><router-link to="/products">Nabídka</router-link></li>
             <li id="nav-image-li">
-              <a href="index.html"
+              <router-link to="/"
                 ><img
                   id="nav-image"
                   alt="úvodní obrázek"
                   src="../assets/logo_bila.svg"
                   width="120"
-              /></a>
+              /></router-link>
             </li>
-            <li class="link"><a href="uc.html">Kariéra</a></li>
-            <li class="link"><a href="uc.html">Pobočky</a></li>
+            <li class="link"><router-link to="/career">Kariéra</router-link></li>
+            <li class="link"><router-link to="/locations">Pobočky</router-link></li>
             <li class="shopping-cart">
-              <a href="cart.html">
+              <router-link to="cart">
                 <img
                   src="../assets/icons/supermarket_White.svg"
                   alt="Košík"
@@ -27,7 +27,7 @@
                   height="40"
                 />
                 <span class="cart-items">0</span>
-              </a>
+              </router-link>
             </li>
           </ul>
         </div>
@@ -38,12 +38,11 @@
         <div class="menu-mobile">
           <p>&gt;&gt; Zobrazit nabídku &lt;&lt;</p>
           <ul class="menu-mobile-list">
-            <li><a href="index.html">Úvod</a></li>
-            <li><a href="uc.html">Cukrárna</a></li>
-            <li><a href="index.html">Nabídka</a></li>
-            <li><a href="uc.html">O kávě</a></li>
-            <li><a href="uc.html">Kariéra</a></li>
-            <li><a href="uc.html">Pobočky</a></li>
+            <li><router-link to="/">Úvod</router-link></li>
+            <li><router-link to="/about">Cukrárna</router-link></li>
+            <li><router-link to="/products">Nabídka</router-link></li>
+            <li><router-link to="/career">Kariéra</router-link></li>
+            <li><router-link to="/locations">Poobočky</router-link></li>
           </ul>
         </div>
       </nav>
@@ -114,7 +113,6 @@ nav ul li {
   left: 0;
   background: #fcfcfc;
 }
-
 .menu-mobile {
   display: none;
 }
