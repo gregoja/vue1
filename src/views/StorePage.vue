@@ -110,14 +110,7 @@
 
     <section class="row productSection">
       <h2>Nabídka vybraných produktů</h2>
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
+      <ProductCard v-for="product in products" :key="product.id" :product="product"/>
     </section>
 
     <nav class="dataLimiter">
@@ -146,14 +139,33 @@ import ProductCard from "../components/ProductCard.vue";
 export default {
   components: {
     ProductCard,
-  }
+  },
+  data() {
+    return {
+      products: [],
+    };
+  },
+  async created() {
+    try {
+      //better use axios
+
+      const response = await fetch("http://localhost:3000/products");
+      const data = await response.json();
+      this.products = data;
+    } catch (e) {
+      console.error(e);
+    }
+  },
 };
 </script>
 
 <style>
-.productSection h2{
+.productSection h2 {
   margin-top: 25px;
   margin-bottom: 25px;
+}
+.productSection {
+  min-height: 500px;
 }
 .filtrovani {
   background-color: #e0e0e0;

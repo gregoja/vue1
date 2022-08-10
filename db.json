@@ -1,0 +1,174 @@
+{
+  "products": [
+      {
+          "id": 1,
+          "name": "Čtverec dort",
+          "pictureUrl": "ctverecDort.png",
+          "price": 325,
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor accumsan. Suspendisse nisl. Morbi scelerisque luctus velit. Praesent id justo in neque elementum ultrices. Praesent dapibus. Praesent in mauris eu tortor porttitor accumsan. Praesent vitae arcu tempor neque lacinia pretium. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Nulla pulvinar eleifend sem. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo.",
+          "added": "2021-04-10T15:01:17.576Z"
+      },
+      {
+          "id": 2,
+          "name": "Vanilkonut",
+          "pictureUrl": "vanilkonut.png",
+          "price": 36,
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor accumsan. Suspendisse nisl. Morbi scelerisque luctus velit. Praesent id justo in neque elementum ultrices. Praesent dapibus. Praesent in mauris eu tortor porttitor accumsan. Praesent vitae arcu tempor neque lacinia pretium. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Nulla pulvinar eleifend sem. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo.",
+          "tagName": "Novinka",
+          "tagColor": "#70bd4a",
+          "added": "2021-04-10T15:01:17.584Z"
+      },
+      {
+          "id": 3,
+          "name": "Borůvkonut",
+          "pictureUrl": "boruvkonut.jpg",
+          "price": 35,
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor accumsan. Suspendisse nisl. Morbi scelerisque luctus velit. Praesent id justo in neque elementum ultrices. Praesent dapibus. Praesent in mauris eu tortor porttitor accumsan. Praesent vitae arcu tempor neque lacinia pretium. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Nulla pulvinar eleifend sem. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo.",
+          "added": "2021-04-10T15:01:17.585Z"
+      },
+      {
+          "id": 4,
+          "name": "Medo dort",
+          "pictureUrl": "medoDort.png",
+          "price": 231,
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor accumsan. Suspendisse nisl. Morbi scelerisque luctus velit. Praesent id justo in neque elementum ultrices. Praesent dapibus. Praesent in mauris eu tortor porttitor accumsan. Praesent vitae arcu tempor neque lacinia pretium. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Nulla pulvinar eleifend sem. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo.",
+          "added": "2021-04-10T15:01:17.585Z"
+      },
+      {
+          "id": 6,
+          "name": "TalířoMuffin",
+          "pictureUrl": "taliroMuffin.png",
+          "price": 17,
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor accumsan. Suspendisse nisl. Morbi scelerisque luctus velit. Praesent id justo in neque elementum ultrices. Praesent dapibus. Praesent in mauris eu tortor porttitor accumsan. Praesent vitae arcu tempor neque lacinia pretium. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Nulla pulvinar eleifend sem. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo.",
+          "added": "2021-04-10T15:01:17.590Z"
+      },
+      {
+          "id": 7,
+          "name": "Prostě donut",
+          "pictureUrl": "prosteDonut.jpg",
+          "price": 8,
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor accumsan. Suspendisse nisl. Morbi scelerisque luctus velit. Praesent id justo in neque elementum ultrices. Praesent dapibus. Praesent in mauris eu tortor porttitor accumsan. Praesent vitae arcu tempor neque lacinia pretium. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Nulla pulvinar eleifend sem. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo.",
+          "tagName": "Sleva",
+          "tagColor": "#b83636",
+          "added": "2021-04-10T15:01:17.590Z"
+      },
+      {
+          "id": 8,
+          "name": "Christmasnut",
+          "pictureUrl": "christmasnut.png",
+          "price": 16,
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor accumsan. Suspendisse nisl. Morbi scelerisque luctus velit. Praesent id justo in neque elementum ultrices. Praesent dapibus. Praesent in mauris eu tortor porttitor accumsan. Praesent vitae arcu tempor neque lacinia pretium. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Nulla pulvinar eleifend sem. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo.",
+          "added": "2021-04-10T15:01:17.591Z"
+      },
+      {
+          "id": 9,
+          "name": "Prostě muffin",
+          "pictureUrl": "prosteMuffin.png",
+          "price": 12,
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor accumsan. Suspendisse nisl. Morbi scelerisque luctus velit. Praesent id justo in neque elementum ultrices. Praesent dapibus. Praesent in mauris eu tortor porttitor accumsan. Praesent vitae arcu tempor neque lacinia pretium. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Nulla pulvinar eleifend sem. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo.",
+          "tagName": "Sleva",
+          "tagColor": "#b83636",
+          "added": "2021-04-10T15:01:17.591Z"
+      },
+      {
+          "id": 10,
+          "name": "Toto dort",
+          "pictureUrl": "totoDort.png",
+          "price": 199,
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor accumsan. Suspendisse nisl. Morbi scelerisque luctus velit. Praesent id justo in neque elementum ultrices. Praesent dapibus. Praesent in mauris eu tortor porttitor accumsan. Praesent vitae arcu tempor neque lacinia pretium. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Nulla pulvinar eleifend sem. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo.",
+          "tagName": "Novinka",
+          "tagColor": "#70bd4a",
+          "added": "2021-04-10T15:01:17.592Z"
+      },
+      {
+          "id": 11,
+          "name": "Homernut",
+          "pictureUrl": "homernut.png",
+          "price": 25,
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor accumsan. Suspendisse nisl. Morbi scelerisque luctus velit. Praesent id justo in neque elementum ultrices. Praesent dapibus. Praesent in mauris eu tortor porttitor accumsan. Praesent vitae arcu tempor neque lacinia pretium. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Nulla pulvinar eleifend sem. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo.",
+          "tagName": "Sleva",
+          "tagColor": "#b83636",
+          "added": "2021-04-10T15:01:17.592Z"
+      },
+      {
+          "id": 12,
+          "name": "Super dort",
+          "pictureUrl": "superDort.png",
+          "price": 253,
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor accumsan. Suspendisse nisl. Morbi scelerisque luctus velit. Praesent id justo in neque elementum ultrices. Praesent dapibus. Praesent in mauris eu tortor porttitor accumsan. Praesent vitae arcu tempor neque lacinia pretium. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Nulla pulvinar eleifend sem. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo.",
+          "added": "2021-04-10T15:01:17.580Z"
+      },
+      {
+          "id": 13,
+          "name": "PolevoMuffin",
+          "pictureUrl": "polevoMuffin.png",
+          "price": 24,
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor accumsan. Suspendisse nisl. Morbi scelerisque luctus velit. Praesent id justo in neque elementum ultrices. Praesent dapibus. Praesent in mauris eu tortor porttitor accumsan. Praesent vitae arcu tempor neque lacinia pretium. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Nulla pulvinar eleifend sem. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo.",
+          "added": "2021-04-10T15:01:17.580Z"
+      },
+      {
+          "id": 14,
+          "name": "Lentilkonut",
+          "pictureUrl": "lentilkonut.jpg",
+          "price": 12,
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor accumsan. Suspendisse nisl. Morbi scelerisque luctus velit. Praesent id justo in neque elementum ultrices. Praesent dapibus. Praesent in mauris eu tortor porttitor accumsan. Praesent vitae arcu tempor neque lacinia pretium. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Nulla pulvinar eleifend sem. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo.",
+          "tagName": "Novinka",
+          "tagColor": "#70bd4a",
+          "added": "2021-04-10T15:01:17.582Z"
+      },
+      {
+          "id": 15,
+          "name": "Prase dort",
+          "pictureUrl": "praseDort.png",
+          "price": 125,
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor accumsan. Suspendisse nisl. Morbi scelerisque luctus velit. Praesent id justo in neque elementum ultrices. Praesent dapibus. Praesent in mauris eu tortor porttitor accumsan. Praesent vitae arcu tempor neque lacinia pretium. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Nulla pulvinar eleifend sem. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo.",
+          "tagName": "Novinka",
+          "tagColor": "#70bd4a",
+          "added": "2021-04-10T15:01:17.582Z"
+      },
+      {
+          "id": 16,
+          "name": "Prostě dort",
+          "pictureUrl": "prosteDort.png",
+          "price": 100,
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor accumsan. Suspendisse nisl. Morbi scelerisque luctus velit. Praesent id justo in neque elementum ultrices. Praesent dapibus. Praesent in mauris eu tortor porttitor accumsan. Praesent vitae arcu tempor neque lacinia pretium. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Nulla pulvinar eleifend sem. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo.",
+          "tagName": "Sleva",
+          "tagColor": "#b83636",
+          "added": "2021-04-10T15:01:17.583Z"
+      },
+      {
+          "id": 17,
+          "name": "TřešňoMuffin",
+          "pictureUrl": "tresnoMuffin.png",
+          "price": 19,
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor accumsan. Suspendisse nisl. Morbi scelerisque luctus velit. Praesent id justo in neque elementum ultrices. Praesent dapibus. Praesent in mauris eu tortor porttitor accumsan. Praesent vitae arcu tempor neque lacinia pretium. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Nulla pulvinar eleifend sem. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo.",
+          "added": "2021-04-10T15:01:17.583Z"
+      },
+      {
+          "id": 18,
+          "name": "ŽlutoMuffin",
+          "pictureUrl": "zlutoMuffin.png",
+          "price": 90,
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor accumsan. Suspendisse nisl. Morbi scelerisque luctus velit. Praesent id justo in neque elementum ultrices. Praesent dapibus. Praesent in mauris eu tortor porttitor accumsan. Praesent vitae arcu tempor neque lacinia pretium. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Nulla pulvinar eleifend sem. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo.",
+          "added": "2021-04-10T15:01:17.583Z"
+      },
+      {
+          "id": 19,
+          "name": "Vanilkonut",
+          "pictureUrl": "vanilkonut.png",
+          "price": 21,
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor accumsan. Suspendisse nisl. Morbi scelerisque luctus velit. Praesent id justo in neque elementum ultrices. Praesent dapibus. Praesent in mauris eu tortor porttitor accumsan. Praesent vitae arcu tempor neque lacinia pretium. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Nulla pulvinar eleifend sem. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo.",
+          "tagName": "Sleva",
+          "tagColor": "#b83636",
+          "added": "2021-04-10T15:01:17.581Z"
+      },
+      {
+          "id": 20,
+          "name": "Posyponut",
+          "pictureUrl": "posyponut.jpg",
+          "price": 17,
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent in mauris eu tortor porttitor accumsan. Suspendisse nisl. Morbi scelerisque luctus velit. Praesent id justo in neque elementum ultrices. Praesent dapibus. Praesent in mauris eu tortor porttitor accumsan. Praesent vitae arcu tempor neque lacinia pretium. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Nulla pulvinar eleifend sem. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo.",
+          "added": "2021-04-10T15:01:17.584Z"
+      }
+  ]
+}

@@ -1,12 +1,11 @@
 <template>
   <div class="card col-sm-12 col-md-6 col-xl-4 productCard" >
-        <span style="visibility: visible; background-color:red" class="badge badge-pill badge-danger"
-          >NULL</span
-        >
-        <img src="../assets/product/barevnyspyani.jpg" alt="productPicture" />
+        <span v-show="product.tagName" :style="{ 'background-color': product.tagColor}"  class="badge badge-pill badge-danger"
+          >{{product.tagName}}</span>
+        <img :src="require(`@/assets/product/${product.pictureUrl}`)" alt="productPicture" />
         <div class="card-body">
-          <h5 class="card-title">Chléb s domácí</h5>
-          <p class="card-text">25 Kč</p>
+          <h5 class="card-title">{{product.name}}</h5>
+          <p class="card-text">{{product.price}} Kč</p>
           <button type="button" class="btn btn-primary">
             Zobrazit
           </button>
@@ -16,7 +15,7 @@
 
 <script>
 export default {
-
+    props: ['product']
 }
 </script>
 
@@ -27,6 +26,10 @@ export default {
 .productCard {
   width: 23rem;
   padding: 1%;
+}
+.productCard img{
+    width:300px;
+    height:300px;
 }
 .card-text {
   text-align: center;
