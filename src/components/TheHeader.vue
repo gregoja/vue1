@@ -6,7 +6,7 @@
           <ul class="menu-list">
             <li class="link"><router-link to="/" exact>Úvod</router-link></li>
             <li class="link"><router-link to="/about">Cukrárna</router-link></li>
-            <li class="link"><router-link to="/products">Nabídka</router-link></li>
+            <li class="link"><router-link to="/store">Nabídka</router-link></li>
             <li id="nav-image-li">
               <router-link to="/"
                 ><img
@@ -40,7 +40,7 @@
           <ul class="menu-mobile-list">
             <li><router-link to="/">Úvod</router-link></li>
             <li><router-link to="/about">Cukrárna</router-link></li>
-            <li><router-link to="/products">Nabídka</router-link></li>
+            <li><router-link to="/store">Nabídka</router-link></li>
             <li><router-link to="/career">Kariéra</router-link></li>
             <li><router-link to="/locations">Poobočky</router-link></li>
           </ul>

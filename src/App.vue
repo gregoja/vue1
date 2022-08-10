@@ -172,9 +172,7 @@ iframe {
   margin-right: 10px;
 }
 @media only screen and (min-width: 576px) {
-  .btn {
-    width: 510px;
-  }
+
   .centrace {
     width: 370px;
   }
@@ -186,10 +184,6 @@ iframe {
     margin: auto;
     display: table;
   }
-  iframe {
-    width: 360px;
-    height: 300px;
-  }
   .tag p,
   .novinka p {
     position: relative;
@@ -198,9 +192,7 @@ iframe {
   }
 }
 @media only screen and (min-width: 768px) {
-  .btn {
-    width: 210px;
-  }
+
   .centrace {
     width: 100%;
     margin-top: 10px;
@@ -230,9 +222,7 @@ iframe {
   }
 }
 @media only screen and (min-width: 992px) {
-  .btn {
-    width: 18rem;
-  }
+
   .soupni {
     margin: auto;
     margin-top: 20px;
@@ -251,10 +241,6 @@ iframe {
 @media only screen and (min-width: 1200px) {
   h1 {
     font-size: 4em;
-  }
-
-  .btn {
-    width: 350px;
   }
 }
 </style>
