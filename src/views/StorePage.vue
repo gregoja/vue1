@@ -110,51 +110,63 @@
 
     <section class="row productSection">
       <h2>Nabídka vybraných produktů</h2>
-      <ProductCard v-for="product in products" :key="product.id" :product="product"/>
+      <ProductCard
+        v-for="product in products"
+        :key="product.id"
+        :product="product"
+      />
     </section>
 
-    <nav class="dataLimiter">
-      <ul class="pagination justify-content-center">
-        <li class="dataLimiterLast page-item disabled">
-          <a class="page-link" aria-disabled="true">Předchozí</a>
-        </li>
-        <li do="last" class="page-item d-none" aria-current="page">
-          <a class="page-link">0</a>
-        </li>
-        <li do="nothing" class="page-item active">
-          <a class="page-link">1</a>
-        </li>
-        <li do="next" class="page-item"><a class="page-link">2</a></li>
-        <li do="next" class="dataLimiterNext page-item">
-          <a class="page-link">Následující</a>
-        </li>
-      </ul>
-    </nav>
+    <ThePagination
+      :totalRecords="totalRecords"
+      :perPage="productsPerPage"
+      @pageChanged="changePage"
+    />
   </div>
 </template>
 
 <script>
 import ProductCard from "../components/ProductCard.vue";
+import ThePagination from "../components/ThePagination.vue";
 
 export default {
   components: {
     ProductCard,
+    ThePagination,
   },
   data() {
     return {
       products: [],
+      totalRecords: 0,
+      productsPerPage: 8
     };
   },
-  async created() {
-    try {
-      //better use axios
+  methods: {
+    async loadProducts(page) {
+      try {
+        //better use axios
 
-      const response = await fetch("http://localhost:3000/products");
-      const data = await response.json();
-      this.products = data;
-    } catch (e) {
-      console.error(e);
-    }
+        const response = await fetch(
+          "http://localhost:3000/products?" +
+            new URLSearchParams({
+              _limit: this.productsPerPage,
+              _page: page,
+            })
+        );
+        const data = await response.json();
+        this.products = data;
+
+        this.totalRecords = response.headers.get("X-Total-Count");
+      } catch (e) {
+        console.error(e);
+      }
+    },
+    changePage(page) {
+      this.loadProducts(page);
+    },
+  },
+  mounted() {
+    this.loadProducts(1);
   },
 };
 </script>
@@ -182,15 +194,6 @@ export default {
 }
 .filtraceGroup label {
   margin-bottom: 0;
-}
-.dataLimiter {
-  margin: auto;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
-}
-.dataLimiter input[type="text"] {
-  width: 30px;
-  text-align: center;
 }
 
 .sloupec {

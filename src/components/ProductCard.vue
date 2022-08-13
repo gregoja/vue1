@@ -35,7 +35,7 @@ export default {
   text-align: center;
 }
 .badge-danger {
-  width: 3.5rem;
+  width: 4rem;
   float: right;
   position: absolute;
   z-index: 1;
