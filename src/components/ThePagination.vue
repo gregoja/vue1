@@ -67,4 +67,7 @@ export default {
   margin-top: 3rem;
   margin-bottom: 2rem;
 }
+.page-item:not(.disabled) {
+  cursor: pointer;
+}
 </style>

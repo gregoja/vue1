@@ -1,30 +1,31 @@
 <template>
   <div>
+    {{ filters }}
     <section class="filtrovani">
       <div class="filtrationColumns">
-        <form action="/produkty.php" method="GET">
-          <input type="hidden" name="page" value="1" />
-
+        <form>
           <div class="sloupec">
-            <h3>Chuť</h3>
+            <h3>Tag</h3>
             <div class="filtracePolozky">
               <div class="filtraceGroup">
                 <input
+                  v-model="filters.tag.content"
                   name="IS_SWEET"
-                  id="neurceno1"
-                  checked
-                  type="radio"
-                  value="-1"
+                  id="sladke"
+                  type="checkbox"
+                  value="1"
                 />
-                <label for="neurceno1">Vše</label>
+                <label for="sladke">Sleva</label>
               </div>
               <div class="filtraceGroup">
-                <input name="IS_SWEET" id="sladke" type="radio" value="1" />
-                <label for="sladke">Sladké</label>
-              </div>
-              <div class="filtraceGroup">
-                <input name="IS_SWEET" id="slane" type="radio" value="0" />
-                <label for="slane">Slané</label>
+                <input
+                  v-model="filters.tag.content"
+                  name="IS_SWEET"
+                  id="slane"
+                  type="checkbox"
+                  value="0"
+                />
+                <label for="slane">Novinka</label>
               </div>
             </div>
           </div>
@@ -34,36 +35,62 @@
             <div class="filtracePolozky">
               <div class="filtraceGroup">
                 <input
+                  v-model="filters.categories.content"
                   name="category"
-                  id="neurceno2"
-                  checked
-                  type="radio"
-                  value="-1"
+                  id="category0"
+                  type="checkbox"
+                  value="4"
                 />
-                <label for="neurceno2">Vše</label>
-              </div>
-              <div class="filtraceGroup">
-                <input name="category" id="category0" type="radio" value="4" />
                 <label for="category0">Chlebíčky</label>
               </div>
               <div class="filtraceGroup">
-                <input name="category" id="category1" type="radio" value="5" />
+                <input
+                  v-model="filters.categories.content"
+                  name="category"
+                  id="category1"
+                  type="checkbox"
+                  value="5"
+                />
                 <label for="category1">Plněné pečivo</label>
               </div>
               <div class="filtraceGroup">
-                <input name="category" id="category2" type="radio" value="6" />
+                <input
+                  v-model="filters.categories.content"
+                  name="category"
+                  id="category2"
+                  type="checkbox"
+                  value="6"
+                />
                 <label for="category2">Saláty</label>
               </div>
               <div class="filtraceGroup">
-                <input name="category" id="category3" type="radio" value="7" />
+                <input
+                  v-model="filters.categories.content"
+                  name="category"
+                  id="category3"
+                  type="checkbox"
+                  value="7"
+                />
                 <label for="category3">Dorty</label>
               </div>
               <div class="filtraceGroup">
-                <input name="category" id="category4" type="radio" value="8" />
+                <input
+                  v-model="filters.categories.content"
+                  name="category"
+                  id="category4"
+                  type="checkbox"
+                  value="8"
+                />
                 <label for="category4">Dezerty v kelímku</label>
               </div>
               <div class="filtraceGroup">
-                <input name="category" id="category5" type="radio" value="9" />
+                <input
+                  v-model="filters.categories.content"
+                  name="category"
+                  id="category5"
+                  type="checkbox"
+                  value="9"
+                />
                 <label for="category5">Jiné</label>
               </div>
             </div>
@@ -77,6 +104,7 @@
                   checked
                   name="order"
                   id="ADDED_DESC"
+                  v-model="filters.sort"
                   type="radio"
                   value="ADDED DESC"
                 />
@@ -86,6 +114,7 @@
                 <input
                   name="order"
                   id="Cena_ASC"
+                  v-model="filters.sort"
                   type="radio"
                   value="PRICE ASC"
                 />
@@ -95,6 +124,7 @@
                 <input
                   name="order"
                   id="Cena_DESC"
+                  v-model="filters.sort"
                   type="radio"
                   value="PRICE DESC"
                 />
@@ -103,7 +133,6 @@
             </div>
           </div>
           <div class="cleaner"></div>
-          <div class="inputContainer"><input type="submit" /></div>
         </form>
       </div>
     </section>
@@ -120,7 +149,7 @@
     <ThePagination
       :totalRecords="totalRecords"
       :perPage="productsPerPage"
-      @pageChanged="changePage"
+      @pageChanged="updateContent"
     />
   </div>
 </template>
@@ -138,19 +167,52 @@ export default {
     return {
       products: [],
       totalRecords: 0,
-      productsPerPage: 8
+      productsPerPage: 8,
+      filters: {
+        tag: {
+          type: "checkbox",
+          apiName: "tagName",
+          content: [],
+        },
+        categories: {
+          type: "checkbox",
+          apiName: "categories",
+          content: [],
+        },
+        //sort: 0,
+      },
     };
   },
   methods: {
     async loadProducts(page) {
       try {
-        //better use axios
+        const searchParams = new URLSearchParams({
+          _limit: this.productsPerPage,
+          _page: page,
+        });
+
+        /*this.filters.tag.content.forEach((element) => {
+          searchParams.append("tagName", element);
+        });
+
+        this.filters.categories.content.forEach((element) => {
+          searchParams.append("category", element);
+        });*/
+
+        // foreach(key, value) key=tag, value = { type:...,apiName:..., conten:...}
+        Object.entries(this.filters).forEach(([, value]) => {
+          value.content.forEach((element) => {
+            searchParams.append(value.apiName, element);
+          });
+        });
+
 
         const response = await fetch(
           "http://localhost:3000/products?" +
             new URLSearchParams({
               _limit: this.productsPerPage,
               _page: page,
+              _tag: this.filters.tag,
             })
         );
         const data = await response.json();
@@ -161,7 +223,7 @@ export default {
         console.error(e);
       }
     },
-    changePage(page) {
+    updateContent(page) {
       this.loadProducts(page);
     },
   },
