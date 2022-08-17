@@ -8,7 +8,7 @@
         <a class="page-link" @click="changePage(-1)">&lt;</a>
       </li>
       <li class="page-item disabled">
-        <a class="page-link">Stránka {{ page }}/{{ pages }}</a>
+        <a class="page-link">Stránka {{ currentPage }}/{{ pages }}</a>
       </li>
       <li class="page-item">
         <a @click="changePage(1)" class="page-link">&gt;</a>
@@ -22,10 +22,10 @@
 
 <script>
 export default {
-  props: ["totalRecords", "perPage"],
+  props: ["totalRecords", "perPage", "page"],
   data() {
     return {
-      page: 1,
+      currentPage: this.page,
     };
   },
   computed: {
@@ -41,22 +41,29 @@ export default {
   },
   methods: {
     changePage(offset) {
+      const pageBefore = this.currentPage;
       switch (offset) {
         case -Infinity:
-          this.page = 1;
+          this.currentPage = 1;
           break;
         case -1:
-          this.page = this.page > 1 ? this.page - 1 : this.page;
+          this.currentPage = this.currentPage > 1 ? this.currentPage - 1 : this.currentPage;
           break;
         case 1:
-          this.page = this.page < this.pages ? this.page + 1 : this.page;
+          this.currentPage = this.currentPage < this.pages ? this.currentPage + 1 : this.currentPage;
           break;
         case Infinity:
-          this.page = this.pages;
+          this.currentPage = this.pages;
       }
-
-      this.$emit("pageChanged", this.page);
+      if(pageBefore != this.currentPage) this.$emit("pageChanged", this.currentPage);
     },
+  },
+  watch: {
+    page:{
+      handler: function (val, ) { 
+        this.currentPage = val;
+      }
+    }
   },
 };
 </script>
