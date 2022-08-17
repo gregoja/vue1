@@ -1,5 +1,5 @@
 <template>
-  <footer class="barva">
+  <footer>
     <div class="page-footer font-small blue pt-4">
         <div class="container-fluid text-center text-md-left">
             <div class="row">
@@ -39,14 +39,24 @@ export default {
 </script>
 
 <style>
+footer {
+  background-color: #5e6768;
+  color: white;
+  padding-top: 10px;
+}
+footer img {
+  float: left;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+footer p {
+  margin-top: 10px;
+}
 footer a{
     text-decoration: none;
     color:white;
 }
 footer a:hover{
     color:white;
-}
-.footer-copyright{
-    background-color: rgb(77, 82, 82);
 }
 </style>

@@ -146,31 +146,11 @@ h5 {
   width: 65px;
   background-color: #70bd4a;
 }
-.barva {
-  background-color: #5e6768;
-  color: white;
-  padding-top: 10px;
-}
-.barva img {
-  float: left;
-  margin-right: 20px;
-  margin-left: 20px;
-}
+
 .podsebe {
   display: table;
 }
-.barva p {
-  margin-top: 10px;
-}
-iframe {
-  margin-top: 20px;
-  width: 100%;
-  height: 270px;
-}
-.copyright {
-  text-align: right;
-  margin-right: 10px;
-}
+
 @media only screen and (min-width: 576px) {
 
   .centrace {

@@ -1,9 +1,13 @@
 <template>
   <div>
     <section>
-      <TheFiltration :filters="filters" @filtersChanged="updateFilters" />
+      <TheFiltration
+        :filters="filters"
+        :sort="sort"
+        @filtersChanged="updateFilters"
+        @sortChanged="updateSort"
+      />
     </section>
-
     <section class="row productSection">
       <h2>Nabídka vybraných produktů</h2>
       <ProductCard
@@ -45,6 +49,7 @@ export default {
           type: "checkbox",
           apiName: "tagName",
           label: ["Sleva", "Novinka"],
+          apiNameContent: ["Sleva", "Novinka"],
           selected: [],
         },
         categories: {
@@ -52,15 +57,16 @@ export default {
           type: "checkbox",
           apiName: "category",
           label: ["Dort", "Donut", "Muffin"],
+          apiNameContent: ["Dort", "Donut", "Muffin"],
           selected: [],
         },
-        sort: {
-          name: "Seřadit od",
-          type: "radio",
-          apiName: "sort",
-          label: ["Data přidání", "Nejnižší ceny", "Nejvyšší ceny"],
-          selected: [],
-        },
+      },
+      sort: {
+        label: ["Data přidání", "Nejnižší ceny", "Nejvyšší ceny"],
+        apiNameContent: ["added", "price", "price"],
+        order: ["desc", "asc", "desc"],
+        selected: "added",
+        selectedOrder: "desc"
       },
     };
   },
@@ -70,6 +76,8 @@ export default {
         const searchParams = new URLSearchParams({
           _limit: this.productsPerPage,
           _page: this.page,
+          _sort: this.sort.selected,
+          _order: this.sort.selectedOrder,
         });
 
         Object.entries(this.filters).forEach(([, value]) => {
@@ -90,24 +98,36 @@ export default {
       }
     },
     updateContentPageChanged(computedPage) {
-      this.page = computedPage; 
-      this.loadProducts()
+      this.page = computedPage;
+      this.loadProducts();
     },
     updateFilters(target) {
       const affectedFilter = this.filters[target.name];
-      if (!affectedFilter.selected.includes(target.value)) {
-        affectedFilter.selected.push(target.value);
+      if (affectedFilter.type == "radio") {
+        affectedFilter.selected = [target.value];
       } else {
-        affectedFilter.selected = affectedFilter.selected.filter((val) => {
-          return val != target.value;
-        });
+        if (!affectedFilter.selected.includes(target.value)) {
+          affectedFilter.selected.push(target.value);
+        } else {
+          affectedFilter.selected = affectedFilter.selected.filter((val) => {
+            return val != target.value;
+          });
+        }
       }
-      this.page = 1
-      this.loadProducts()
+
+      this.page = 1;
+      this.loadProducts();
+    },
+    updateSort(target) {
+      this.sort.selected = target.value;
+      this.sort.selectedOrder = target.getAttribute('data-order');
+
+      this.page = 1;
+      this.loadProducts();
     },
   },
   mounted() {
-    this.loadProducts()
+    this.loadProducts();
   },
 };
 </script>
