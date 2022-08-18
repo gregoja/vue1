@@ -4,8 +4,8 @@
       <TheFiltration
         :filters="filters"
         :sort="sort"
-        @filtersChanged="updateFilters"
-        @sortChanged="updateSort"
+        @filtersChanged="updateContentFiltersChanged"
+        @sortChanged="updateContentSortChanged"
       />
     </section>
     <section class="row productSection">
@@ -80,6 +80,7 @@ export default {
           _order: this.sort.selectedOrder,
         });
 
+        // goes throgh filters and appends selected elements
         Object.entries(this.filters).forEach(([, value]) => {
           value.selected.forEach((element) => {
             searchParams.append(value.apiName, element);
@@ -101,7 +102,7 @@ export default {
       this.page = computedPage;
       this.loadProducts();
     },
-    updateFilters(target) {
+    updateContentFiltersChanged(target) {
       const affectedFilter = this.filters[target.name];
       if (affectedFilter.type == "radio") {
         affectedFilter.selected = [target.value];
@@ -118,7 +119,7 @@ export default {
       this.page = 1;
       this.loadProducts();
     },
-    updateSort(target) {
+    updateContentSortChanged(target) {
       this.sort.selected = target.value;
       this.sort.selectedOrder = target.getAttribute('data-order');
 

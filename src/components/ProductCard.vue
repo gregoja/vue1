@@ -1,14 +1,14 @@
 <template>
-  <div class="card col-sm-12 col-md-6 col-xl-4 productCard" >
+  <div class="card col-sm-12 col-md-6 col-xl-4 product-card" >
         <span v-show="product.tagName" :style="{ 'background-color': product.tagColor}"  class="badge badge-pill badge-danger"
           >{{product.tagName}}</span>
         <img :src="require(`@/assets/product/${product.pictureUrl}`)" alt="productPicture" />
         <div class="card-body">
           <h5 class="card-title">{{product.name}}</h5>
           <p class="card-text">{{product.price}} Kč</p>
-          <button type="button" class="btn btn-primary">
+          <a :href="`/product/`+product.id" class="btn btn-primary">
             Zobrazit
-          </button>
+          </a>
         </div>
       </div>
 </template>
@@ -23,11 +23,11 @@ export default {
 .btn {
   width: 100%;
 }
-.productCard {
+.product-card {
   width: 23rem;
   padding: 1%;
 }
-.productCard img{
+.product-card img{
     width:300px;
     height:300px;
 }
